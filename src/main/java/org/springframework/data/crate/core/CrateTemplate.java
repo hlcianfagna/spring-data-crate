@@ -41,7 +41,7 @@ import org.springframework.data.crate.core.sql.AbstractStatement;
 import org.springframework.data.crate.core.sql.CrateSQLStatement;
 import org.springframework.data.crate.core.sql.Insert;
 import org.springframework.data.crate.core.sql.RefreshTable;
-import org.springframework.data.mapping.model.MappingException;
+import org.springframework.data.mapping.MappingException;
 import org.springframework.util.StringUtils;
 
 import java.util.*;
