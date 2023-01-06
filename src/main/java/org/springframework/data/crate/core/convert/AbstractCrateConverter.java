@@ -19,7 +19,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.convert.support.DefaultConversionService;
 import org.springframework.core.convert.support.GenericConversionService;
-import org.springframework.data.convert.EntityInstantiators;
+import org.springframework.data.mapping.model.EntityInstantiators;
 
 import static org.springframework.util.Assert.notNull;
 

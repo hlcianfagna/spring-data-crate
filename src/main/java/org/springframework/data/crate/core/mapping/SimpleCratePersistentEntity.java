@@ -24,7 +24,7 @@ import org.springframework.data.crate.core.mapping.annotations.Table;
 import org.springframework.data.crate.core.mapping.schema.TableParameters;
 import org.springframework.data.mapping.PropertyHandler;
 import org.springframework.data.mapping.model.BasicPersistentEntity;
-import org.springframework.data.mapping.model.MappingException;
+import org.springframework.data.mapping.MappingException;
 import org.springframework.data.util.TypeInformation;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 
