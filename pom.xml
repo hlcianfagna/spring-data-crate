@@ -10,8 +10,7 @@
     <parent>
         <groupId>org.springframework.data.build</groupId>
         <artifactId>spring-data-parent</artifactId>
-        <version>1.6.0.RELEASE</version>
-        <relativePath>../spring-data-build/parent/pom.xml</relativePath>
+        <version>3.0.0</version>        
     </parent>
 
     <name>Spring Data Crate</name>
@@ -23,16 +22,23 @@
         <dist.key>DATACRATE</dist.key>
 
         <commons-collections.version>3.2.2</commons-collections.version>
-        <commons-lang.version>3.4</commons-lang.version>
+        <commons-lang.version>3.4</commons-lang.version>        
         <crate-client.version>0.54.9</crate-client.version>
-        <crate-testing>0.4.0</crate-testing>
-        <spring-data-commons.version>1.12.1.RELEASE</spring-data-commons.version>
+        <crate-testing>0.10.0</crate-testing>
+        <spring-data-commons.version>3.0.0</spring-data-commons.version>
         <spring-beans.version>4.2.6.RELEASE</spring-beans.version>
-        <spring-core.version>4.2.6.RELEASE</spring-core.version>
+        <spring-core.version>6.0.3</spring-core.version>
         <javax-validation.version>1.1.0.Final</javax-validation.version>
-        <hibernate-validator.version>5.2.4.Final</hibernate-validator.version>
-        <guava.version>19.0</guava.version>
-        <apache.httpcomponents.version>4.3.4</apache.httpcomponents.version>
+        <hibernate-validator.version>7.0.5.Final</hibernate-validator.version>
+        <guava.version>31.1-jre</guava.version>
+        <apache.httpcomponents.version>4.5.14</apache.httpcomponents.version>
+		<junit>4.13.2</junit>
+		<jodatime>2.12.1</jodatime>
+		<jackson>2.14.1</jackson>
+		<cdi>2.0.SP1</cdi>
+		<elapi>2.2.1-b04</elapi>
+		<webbeans>1.2.8</webbeans>
+		<mockito>4.11.0</mockito>
     </properties>
 
     <dependencies>
@@ -186,16 +192,9 @@
         <dependency>
             <groupId>javax.el</groupId>
             <artifactId>el-api</artifactId>
-            <version>${cdi}</version>
+            <version>${elapi}</version>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.openwebbeans.test</groupId>
-            <artifactId>cditest-owb</artifactId>
-            <version>${webbeans}</version>
-            <scope>test</scope>
-        </dependency>
+        </dependency>        
 
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -229,6 +228,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>wagon-maven-plugin</artifactId>
+				<version>2.0.2</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -264,27 +264,9 @@
         </developer>
     </developers>
 
-    <repositories>
-        <repository>
-            <id>spring-libs-snapshot</id>
-            <url>http://repo.spring.io/libs-snapshot</url>
-        </repository>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>central</id>
-            <name>bintray</name>
-            <url>http://dl.bintray.com/crate/crate</url>
-        </repository>
-    </repositories>
+    
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-plugins-release</id>
-            <url>http://repo.spring.io/plugins-release</url>
-        </pluginRepository>
-    </pluginRepositories>
+    
 
     <scm>
         <url>https://github.com/KPTechnologyLab/spring-data-crate</url>
